@@ -1,0 +1,43 @@
+#clg{
+    font-weight: bold;
+    font-family: cursive;
+    color: white;
+    animation-name: mono;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mono{
+    0%{
+        background: linear-gradient(60deg,red,blue);
+    }100%{
+        background: linear-gradient(60deg,#00ffff,red);
+    }
+}
+
+img{
+    height: 5rem;
+    width: 5rem;
+}
+
+.login{
+    background: linear-gradient(60deg,#6960EC,#6A0DAD);
+}
+
+.login:hover{
+    font-size: large;
+}
+
+@media screen and (max-width: 600px) {
+    .responsive{
+        display: none;
+    }
+    button{
+        display: none;
+    }
+}
+
+button:hover{
+    border:2px solid white;
+    background: linear-gradient(60deg,#6960EC,#6A0DAD);
+}

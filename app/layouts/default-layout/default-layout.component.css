@@ -1,0 +1,47 @@
+.fa{
+    font-size: 2rem;
+    color: white;
+    padding: .5rem;
+    border:2px solid white;
+}
+.fa-facebook{
+    background-color:#6A5Acd;
+}
+
+.fa-twitter{
+    background-color:#893BFF;
+}
+
+.fa-instagram{
+    background-color:#ff5f1f;
+}
+
+.fa-telegram{
+    background-color:#7B68EE;
+}
+
+@keyframes icon {
+    0%{
+        color:white;
+    }100%{
+        color: black;
+    }
+}
+
+.fa:hover{
+    border-color:red;
+    animation-name: iocn;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    transition: 5s;
+}
+
+#menu{
+    display: none;
+}
+
+@media screen and (max-width:600px) {
+    #menu{
+        display:block;
+    }
+}

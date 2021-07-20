@@ -1,0 +1,75 @@
+<div class="container-md">
+    <div class="row justify-content-center pt-4">
+        <div class="col-md-6">
+            <mat-card class="shadow">
+                <p class="mat-headline" style="text-align: center;font-family: cursive;font-weight: bold;text-decoration: underline;">Registration Form</p>
+                <form [formGroup]="regForm" (ngSubmit)="onSubmit()" class="p-4" fxLayout="column">
+                    <p class="mat-subtitle" style="font-weight: bold;">Personal</p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input type="text" matInput formControlName="username" required>
+                        <mat-icon matSuffix>account_circle</mat-icon>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input type="text" matInput formControlName="first_name" required>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input type="text" matInput formControlName="last_name" required>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+
+                    <div formGroupName="address" class="d-flex flex-column">
+                        <p class="mat-subtitle" style="font-weight: bold;">Address</p>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Street</mat-label>
+                            <input type="text" matInput formControlName="street" required>
+                        </mat-form-field>
+                        
+                        <mat-form-field appearance="outline">
+                            <mat-label>City</mat-label>
+                            <input type="text" matInput formControlName="city" required>
+                        </mat-form-field>
+
+                        
+                        <mat-form-field appearance="outline">
+                            <mat-label>State</mat-label>
+                            <mat-select formControlName="state" required>
+                                <mat-option value="MP">MP</mat-option>
+                                <mat-option value="UP">UP</mat-option>
+                                <mat-option value="RP">RJ</mat-option>
+                                <mat-option value="MR">MR</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        
+                        <mat-form-field appearance="outline">
+                            <mat-label>Country</mat-label>
+                            <mat-select formControlName="country" required>
+                                <mat-option value="India">India</mat-option>
+                                <mat-option value="UK">UK</mat-option>
+                                <mat-option value="US">US</mat-option>
+                                <mat-option value="Russia">Russia</mat-option>
+                            </mat-select>
+                        </mat-form-field>    
+                    </div>
+
+                    <button mat-raised-button type="submit" color="primary" [disabled]="!regForm.valid">Register</button>
+                </form>
+                <div class="bg-success p-2" *ngIf="success">
+                    <p style="text-align: center;" class="text-white">Registration Done!</p>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

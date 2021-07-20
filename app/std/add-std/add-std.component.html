@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <mat-card>
+                <p class="mat-headline" style="text-align: center; font-family: cursive;font-weight: bold;">{{title}}</p>
+                <form [formGroup]="addForm" (ngSubmit)="onSubmit()" class="p-4" fxLayout="column">
+                    <p class="mat-subtitle" style="font-weight: bold;">Personal</p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input type="text" matInput formControlName="username" required>
+                        <mat-icon matSuffix>account_circle</mat-icon>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input type="text" matInput formControlName="first_name" required>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input type="text" matInput formControlName="last_name" required>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+
+                    <div formGroupName="address" class="d-flex flex-column">
+                        <p class="mat-subtitle" style="font-weight: bold;">Address</p>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Street</mat-label>
+                            <input type="text" matInput formControlName="street" required>
+                        </mat-form-field>
+                        
+                        <mat-form-field appearance="outline">
+                            <mat-label>City</mat-label>
+                            <input type="text" matInput formControlName="city" required>
+                        </mat-form-field>
+
+                        
+                        <mat-form-field appearance="outline">
+                            <mat-label>State</mat-label>
+                            <input type="text" matInput formControlName="state" required>
+                        </mat-form-field>
+
+                        
+                        <mat-form-field appearance="outline">
+                            <mat-label>Country</mat-label>
+                            <input type="text" matInput formControlName="country" required>
+                        </mat-form-field>    
+                    </div>
+
+                    <div>
+                        <button class="btn btn-danger" (click)="goBack()">Cancle</button>
+                        <button type="submit" style="float: right;" class="btn btn-success" [disabled]="!addForm.valid">Save</button>
+                    </div>
+                </form>
+                <div *ngIf="success" class="bg-success p-4 text-white" style="text-align: center;">
+                    <p class="mat-headline">Data Updated Successfully!</p>
+                </div>
+                <div *ngIf="DataAdded" class="bg-success p-4 text-white" style="text-align: center;">
+                    <p class="mat-headline">Data Added Successfully!</p>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

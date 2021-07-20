@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-12">
+            <mat-drawer-container  style="height: auto;" class="pt-5 mt-5">
+                <mat-drawer #drawer mode="push">
+                    <mat-list class="mt-2">
+                        <mat-nav-list>
+                            <a routerLink="/" mat-list-item><mat-icon>home</mat-icon>Home</a>
+                            <a routerLink="/" mat-list-item><mat-icon>info</mat-icon>AboutUs</a>
+                            <a routerLink="/courses" mat-list-item><mat-icon>school</mat-icon>Courses</a>
+                            <a routerLink="/" mat-list-item><mat-icon>contact_support</mat-icon>ContentUs</a>
+                            <a routerLink="/auth/signup" mat-list-item><mat-icon>home</mat-icon>Signup</a>
+                            <a routerLink="/auth/login" mat-list-item><mat-icon>home</mat-icon>Login</a>
+                        </mat-nav-list>    
+                    </mat-list>
+                </mat-drawer>
+                <mat-drawer-content>
+                    <button mat-icon-button (click)="drawer.toggle()" id="menu">
+                        <mat-icon color="primary">menu</mat-icon>
+                    </button>
+                    <div class="d-flex flex-column" style="position: fixed;z-index: 1;">
+                        <i class="fa fa-facebook" matTooltip="Facebook" matTooltipPosition="after"></i>
+                        <i class="fa fa-twitter" matTooltip="Twitter" matTooltipPosition="after"></i>
+                        <i class="fa fa-instagram" matTooltip="Instagram" matTooltipPosition="after"></i>
+                        <i class="fa fa-telegram" matTooltip="Telegram" matTooltipPosition="after"></i>
+                    </div>
+                    <router-outlet></router-outlet><br><br><br><br><br><br>
+                </mat-drawer-content>
+            </mat-drawer-container>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
