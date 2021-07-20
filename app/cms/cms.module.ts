@@ -7,13 +7,15 @@ import { CoursesComponent } from './courses/courses.component';
 import { MaterialModule } from '../material/material.module';
 import { CmsService } from './cms.service';
 import { DialogComponent } from './dialog/dialog.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     CoursesComponent,
-    DialogComponent
+    DialogComponent,
+    ContactUsComponent
   ],
   imports: [
     CommonModule,
