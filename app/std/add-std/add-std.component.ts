@@ -38,6 +38,7 @@ export class AddStdComponent implements OnInit {
       first_name:['',Validators.required],
       last_name:['',Validators.required],
       password:['',Validators.required],
+      image:['',Validators.required],
       address: this.fb.group({
         street:['',Validators.required],
         city:['',Validators.required],

@@ -26,4 +26,8 @@ export class CmsService {
     console.log(did)
     return this.http.get<Faculty[]>(`${this.apiUrl}/faculties/${did}`)
   }
+
+  getFacultyById(id:number):Observable<Faculty>{
+    return this.http.get<Faculty>(`${this.apiUrl}/${id}`)
+  }
 }

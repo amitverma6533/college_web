@@ -1,11 +1,12 @@
 <mat-toolbar color="primary" class="fixed-top">
-   <mat-toolbar-row class="d-flex justify-content-around">
-    <img src="assets/img/images.jpg">
+   <mat-toolbar-row class="d-flex justify-content-around shadow">
+    <img src="assets/img/images.jpg" class="img-fluid">
     <span id="clg">Std College</span>
     <span class="border p-2 mat-subtitle">Best Way For Learning...</span>
    </mat-toolbar-row>   
 
-   <mat-toolbar-row id="responsive" class="bg-dark d-flex justify-content-around">
+   <mat-toolbar-row id="responsive" class="bg-dark d-flex justify-content-around shadow">
+         <ng-content></ng-content>
         <button mat-icon-button routerLink="/"><mat-icon>home</mat-icon> Home</button>
         <button mat-icon-button [matMenuTriggerFor]="appMenu"><mat-icon>category</mat-icon> Departments</button>
             <mat-menu #appMenu="matMenu" class="bg-dark">

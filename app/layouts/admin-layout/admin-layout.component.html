@@ -1,26 +1,25 @@
-<app-admin-header></app-admin-header>
+<app-admin-header>
+    <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+</app-admin-header>
 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            
+<div class="container-fluid">
+    <div class="row pt-5">
+        <div class="col">
+            <mat-drawer-container class="h-100" class="pt-5">
+                <mat-drawer #drawer>
+                    <mat-nav-list>
+                        <a mat-list-item color="accent" routerLink="/admin/std-list">Student List</a>
+                        <a mat-list-item color="accent" routerLink="/admin/add">Add Student Details</a>
+                    </mat-nav-list>
+                </mat-drawer>
+                <mat-drawer-content>
+                    <router-outlet></router-outlet>
+                </mat-drawer-content>
+            </mat-drawer-container>
         </div>
     </div>
 </div>
-
-<button mat-icon-button (click)="drawer.toggle()" class="pt-5">
-    <mat-icon>menu</mat-icon>
-</button>
-<mat-drawer-container class="h-100">
-    <mat-drawer #drawer>
-        <mat-nav-list>
-            <a mat-list-item color="accent" routerLink="/admin/std-list">Student List</a>
-            <a mat-list-item color="accent" routerLink="/admin/add">Add Student Details</a>
-        </mat-nav-list>
-    </mat-drawer>
-    <mat-drawer-content>
-        <router-outlet></router-outlet>
-    </mat-drawer-content>
-</mat-drawer-container>
 
 <app-admin-footer></app-admin-footer>

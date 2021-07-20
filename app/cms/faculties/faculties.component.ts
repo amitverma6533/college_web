@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CmsService } from '../cms.service';
 import { Faculty } from '../models/faculty';
 
@@ -9,16 +10,18 @@ import { Faculty } from '../models/faculty';
 })
 export class FacultiesComponent implements OnInit {
 
-  faculties:Faculty[] = [];
+  faculties:Faculty;
+  id:number;
 
-  constructor(private cmsService:CmsService) { }
+  constructor(private cmsService:CmsService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getFaculties();
+    this.id = +this.route.snapshot.paramMap.get('id');
+    this.getFacultie();
   }
 
-  getFaculties(){
-    this.cmsService.getFaculties().subscribe(
+  getFacultie(){
+    this.cmsService.getFacultyById(this.id).subscribe(
       result => {
         this.faculties = result
         console.log(result)

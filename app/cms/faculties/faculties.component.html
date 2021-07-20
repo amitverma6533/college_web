@@ -1,1 +1,13 @@
-<p>faculties works!</p>
+<div class="container" *ngIf="faculties">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <mat-card class="shadow">
+                <mat-card-content>
+                    <img mat-card-image src="assets/img/{{faculties.image}}" alt="{{faculties.first_name}}">
+                    <p><b>Name:-</b> {{faculties.first_name}} {{faculties.last_name}}</p>
+                    <p>{{faculties.post}}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
