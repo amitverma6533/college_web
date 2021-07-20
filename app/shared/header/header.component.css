@@ -28,8 +28,12 @@ img{
     font-size: large;
 }
 
+#responsive{
+    display: block;
+}
+
 @media screen and (max-width: 600px) {
-    .responsive{
+    #responsive{
         display: none;
     }
     button{
@@ -40,4 +44,8 @@ img{
 button:hover{
     border:2px solid white;
     background: linear-gradient(60deg,#6960EC,#6A0DAD);
+}
+
+button{
+    color: white;
 }

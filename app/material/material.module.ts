@@ -11,8 +11,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
+import {MatMenuModule} from '@angular/material/menu';
  
-const a =[MatButtonModule,MatSelectModule,MatDialogModule,MatTooltipModule,MatExpansionModule,MatListModule,MatCardModule,MatToolbarModule,MatSidenavModule,MatFormFieldModule,MatInputModule,MatIconModule];
+const a =[MatButtonModule,MatMenuModule,MatSelectModule,MatDialogModule,MatTooltipModule,MatExpansionModule,MatListModule,MatCardModule,MatToolbarModule,MatSidenavModule,MatFormFieldModule,MatInputModule,MatIconModule];
 
 @NgModule({
   imports: [a],

@@ -5,12 +5,23 @@
     <span class="border p-2 mat-subtitle">Best Way For Learning...</span>
    </mat-toolbar-row>   
 
-   <mat-toolbar-row class="bg-dark d-flex justify-content-around responsive">
+   <mat-toolbar-row id="responsive" class="bg-dark d-flex justify-content-around">
         <button mat-icon-button routerLink="/"><mat-icon>home</mat-icon> Home</button>
+        <button mat-icon-button [matMenuTriggerFor]="appMenu"><mat-icon>category</mat-icon> Departments</button>
+            <mat-menu #appMenu="matMenu" class="bg-dark">
+               <button mat-menu-item [matMenuTriggerFor]="subMenu">Engineering</button>
+                  <mat-menu #subMenu="matMenu" class="bg-dark">
+                     <button mat-menu-item routerLink="/departments/1">CSE</button>
+                     <button mat-menu-item routerLink="/departments/2">Ec</button>
+                     <button mat-menu-item routerLink="/departments/3">Civil</button>
+                     <button mat-menu-item routerLink="/departments/4">Mechanical</button>
+                  </mat-menu>
+               <button mat-menu-item>B.sc</button>
+            </mat-menu>
         <button mat-icon-button routerLink="/contact"><mat-icon>info</mat-icon> AboutUs</button>
         <button mat-icon-button routerLink="/courses"><mat-icon>school</mat-icon>Courses</button>
         <button mat-icon-button routerLink="/contact"><mat-icon>contact_support</mat-icon>ContactUs</button>
-        <button mat-flat-button routerLink="/auth/signup">Signup</button>
+        <button mat-flat-button routerLink="/auth/signup" class="text-dark">Signup</button>
         <button mat-icon-button routerLink="/auth/login" class="login shadow">Login</button>
    </mat-toolbar-row>
 </mat-toolbar>
