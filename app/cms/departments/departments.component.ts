@@ -25,8 +25,7 @@ export class DepartmentsComponent implements OnInit {
     this.cmsService.getByDepartmentId(this.did).subscribe(
       result => {
         this.faculties = result
-        console.log(result)
-        console.log(this.did);                                    
+        console.log(result);                                   
       }
     )
   }
