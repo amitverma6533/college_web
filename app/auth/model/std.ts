@@ -9,5 +9,6 @@ export interface Std {
     street:any,
     city:string,
     state:string,
-    country:string
+    country:string,
+    image:string
 }

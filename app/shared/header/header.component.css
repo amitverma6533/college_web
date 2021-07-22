@@ -49,3 +49,22 @@ button:hover{
 button{
     color: white;
 }
+
+.animate{
+    animation-name: ani;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    border: 1px solid white;
+}
+
+@keyframes ani{
+    0%{
+        border-top-color:red;
+    }25%{
+        border-right-color: red;
+    }50%{
+        border-bottom-color: red;
+    }100%{
+        border-left-color: red;
+    }
+}

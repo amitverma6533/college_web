@@ -17,12 +17,34 @@
     </button>
   </div>
 
+  <!--<div style="text-align: center;" class="mt-5">
+    <form [formGroup]="uform" (ngSubmit)="onSubmit()">
+      <input type="text" formcontrolName="name">
+      <button mat-raised-button type="submit">Submit</button>
+    </form>
+  </div>-->
+
+  <div class="container">
+    <div class="row mt-4 justify-content-center">
+      <div class="col-md-4">
+        <mat-card class="shadow" id="frm">
+          <p class="mat-subheading-2" style="font-weight: bold;text-align: center;">Login Form</p>
+          <form class="d-flex flex-column p-2">
+            <input type="text" placeholder=" Username" class="shadow form-control" style="border: none;border-radius:10%;"><br>
+            <input type="text"  placeholder=" Password" class="shadow form-control" style="border: none;border-radius:10%;"><br>
+            <button class="btn btn-success shadow">Login</button>
+          </form>
+        </mat-card> 
+      </div>
+    </div>
+  </div>
+
   <h1 style="opacity: .8;">Our Institutions</h1><hr>
 
   <div class="container-md">
     <div class="row">
       <div class="col-md-3">
-        <mat-card class="shadow">
+        <mat-card class="shadow ani">
           <img mat-card-image src="assets/img/Alliman-Administration-Center-Hesston-College-Mennonite-college.jpg" alt="Alliman-Administration-Center-Hesston-College-Mennonite-college.jpg">
           <mat-card-subtitle style="text-align: center;"> 
             <p>Self Financing</p>
@@ -30,7 +52,7 @@
         </mat-card>
       </div>
       <div class="col-md-3">
-        <mat-card class="shadow">
+        <mat-card class="shadow ani">
           <img mat-card-image src="assets/img/images (1).jpg" alt="images (1).jpg">
           <mat-card-subtitle style="text-align: center;"> 
             <p>Government</p>
@@ -38,7 +60,7 @@
         </mat-card>
       </div>
       <div class="col-md-3">
-        <mat-card class="shadow">
+        <mat-card class="shadow ani">
           <img mat-card-image src="assets/img/images (2).jpg" alt="images (2).jpg">
           <mat-card-subtitle style="text-align: center;"> 
             <p>Private</p>
@@ -46,7 +68,7 @@
         </mat-card>
       </div>
       <div class="col-md-3">
-        <mat-card class="shadow">
+        <mat-card class="shadow ani">
           <img mat-card-image src="assets/img/images (3).jpg" alt="images (3).jpg">
           <mat-card-subtitle style="text-align: center;"> 
             <p>Polytechnic</p>

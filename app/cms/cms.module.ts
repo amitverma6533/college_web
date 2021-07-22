@@ -10,6 +10,7 @@ import { DialogComponent } from './dialog/dialog.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FacultiesComponent } from './faculties/faculties.component';
 import { DepartmentsComponent } from './departments/departments.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { DepartmentsComponent } from './departments/departments.component';
   imports: [
     CommonModule,
     CmsRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers:[CmsService]
 })

@@ -13,6 +13,6 @@ export class AppComponent implements OnInit{
   constructor(private dialog:MatDialog){}
 
   ngOnInit() {
-    this.dialog.open(DialogComponent);
+    //this.dialog.open(DialogComponent);
   }
 }
